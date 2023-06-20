@@ -1,0 +1,3 @@
+config:
+    seed: 42
+    mlflow_loc: "sqlite:///mlflow.db"
