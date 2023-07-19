@@ -7,27 +7,8 @@ repos:
       - id: check-added-large-files
         args: ["--maxkb=100000"]
       - id: double-quote-string-fixer
-  - repo: https://github.com/pycqa/isort
-    rev: v5.12.0
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.0.278
     hooks:
-      - id: isort
-        name: isort (python)
-  - repo: https://github.com/PyCQA/autoflake
-    rev: v2.0.1
-    hooks:
-      - id: autoflake
-        name: Remove unused variables and imports
-        entry: autoflake
-        language: python
-        args:
-          [
-            "--in-place",
-            "--remove-all-unused-imports",
-            "--remove-unused-variables",
-            "--expand-star-imports",
-            "--ignore-init-module-imports",
-          ]
-    # - repo: https://github.com/pycqa/flake8
-    #     rev: 3.8.3
-    #     hooks:
-    #     - id: flake8
+      - id: ruff

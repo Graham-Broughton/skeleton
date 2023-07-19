@@ -1,0 +1,16 @@
+# hydra:
+#   output_subdir: null
+#   run:
+#     dir: .
+
+defaults:
+  - wandb: defaults
+  - model: model1
+  - dataset: train
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+# data:
+#   raw: data/raw
+#   processed: data/processed
+#   final: data/final
